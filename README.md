@@ -20,6 +20,7 @@ Can-of-books-frontend
 01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
 10.23.21 Mongo DB Initialization
+10.23.21 Mongo DB Functional
 
 ## Estimates
 <!-- See below -->
@@ -30,10 +31,19 @@ Estimate of time needed to complete: 1 hour
 
 Start time: 4:35PM
 
-Finish time: _____
+Finish time: 5:20PM
 
-Actual time needed to complete: _____
+Actual time needed to complete: 45 min
+
+Name of Feature: MongoDB connection
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 5:30PM
+
+Finish time: 8:30PM
+
+Actual time needed to complete: 3 hours
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build
-
