@@ -51,7 +51,7 @@ db.once('open', _ => {
 });
 
 
-
+// Handle Errors
 BookModel.find((err, item) => {
   if (err) return console.error(err);
   console.log('This is the item', item);
