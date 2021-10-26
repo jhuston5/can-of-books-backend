@@ -26,8 +26,8 @@ app.get('/allBooks', (req, res) => {
   BookModel.find((err, item) => {
     if (err) return res.status(500).send(err);
     else {
-    res.status(200).send(item);
-  }
+      res.status(200).send(item);
+    }
   });
 });
 
@@ -39,7 +39,7 @@ app.get('*', (request, response) => {
 
 
 // Mongoose Connection
-mongoose.connect(process.env.MONGO_CONNECTION_STRING,
+mongoose.connect(`${process.env.MONGO_CONNECTION_STRING}/canOfBooks`,
   { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
