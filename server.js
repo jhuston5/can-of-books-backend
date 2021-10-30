@@ -29,6 +29,8 @@ app.post('/test/:info', (req, res) => {
 app.get('/seed', seedBook);
 app.get('/clear', bombTheBase);
 app.delete('/allBooks/:id', deleteBook);
+app.put('/allBooks/:id', putBook);
+
 
 app.get('/allBooks', (req, res) => {
   BookModel.find((err, item) => {
@@ -86,6 +88,20 @@ async function deleteBook(req, res) {
   }
   catch {
     res.status(500).send('error:', err.message);
+  }
+}
+
+
+async function putBook(req, res) {
+  let putObj = req.body;
+  let id = req.params.id;
+
+  try {
+    const updatedObj = await BookModel.findByIdAndUpdate(id, putObj, { new: true, overwrite: true });
+    res.status(200).send(updatedObj);
+  }
+  catch (err) {
+    res.status(500).send(`Unable to perform PUT: ${err.message}`);
   }
 }
 
